@@ -17,7 +17,7 @@ export default {
     return {
       text: true,
       msg: 'aasaSS ',
-      number: 2,
+      number: 21,
       tableData3: [ // 数据源
         {
           date: '2016-05-19',
