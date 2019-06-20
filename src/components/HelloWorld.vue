@@ -3,6 +3,7 @@
     <custom-input v-model="msg" :name="{name:'武汉'}">小明去上学吧</custom-input>
       <vm-input :num.sync="number" :width="30"></vm-input>
    <button @click="btnClick">懒加载</button>
+   <v-excel/>
     <input type="checkbox" :value="msg" v-model="text" @change="changes($event)"/>JIM
 </div>
 </template>
@@ -11,6 +12,7 @@
 import { mapState } from 'vuex'
 import vmInput from './input'
 import customInput from './customInput'
+import vExcel from './excel'
 export default {
   name: 'HelloWorld',
   data () {
@@ -58,7 +60,8 @@ export default {
   },
   components: {
     vmInput,
-    customInput
+    customInput,
+    vExcel
   }
 }
 </script>

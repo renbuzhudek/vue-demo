@@ -2,7 +2,7 @@
 <template>
     <div class="my-table">
        <el-table
-    
+
     ref="multipleTable"
     :data="tableData"
     tooltip-effect="dark"
@@ -28,15 +28,15 @@
       show-overflow-tooltip>
     </el-table-column>
   <el-table-column
-     
+
       label="操作"
       show-overflow-tooltip>
        <template slot-scope="scope">
         <el-button
-        
+
           size="mini"
           @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-        
+
       </template>
     </el-table-column>
   </el-table>
@@ -54,27 +54,27 @@
 </template>
 <script>
 export default {
-  data() {
+  data () {
     return {
       multipleSelection: []
     }
   },
-  props: ["tableData", "total", "name"],
+  props: ['tableData', 'total', 'name'],
   methods: {
-    toggleSelection(rows) {
+    toggleSelection (rows) {
       if (rows) {
         rows.forEach(row => {
-          this.$refs.multipleTable.toggleRowSelection(row);
-        });
+          this.$refs.multipleTable.toggleRowSelection(row)
+        })
       } else {
-        this.$refs.multipleTable.clearSelection();
+        this.$refs.multipleTable.clearSelection()
       }
     },
-    handleSelectionChange(val) {
-      this.multipleSelection = val;
+    handleSelectionChange (val) {
+      this.multipleSelection = val
     }
   }
-};
+}
 </script>
 <style lang="less" >
 .my-table {
@@ -93,7 +93,7 @@ export default {
 
           td {
             border: 0;
-           
+
           }
         }
         tr:hover {

@@ -60,21 +60,21 @@
 <script>
 // 保留小数点2位
 var textfix = function (nnumber) {
-  var newnumber = nnumber.replace(/[^\d.]/g, '').replace(/^\./g, '').replace(/\.{2,}/g, '.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.').replace(/^(\-)*(\d+)\.(\d\d).*$/, '$1$2.$3')
+  var newnumber = nnumber.replace(/[^\d.]/g, '').replace(/^\./g, '').replace(/\.{2,}/g, '.').replace('.', '$#$').replace(/\./g, '').replace('$#$', '.').replace(/^(-)*(\d+)\.(\d\d).*$/, '$1$2.$3')
   return newnumber
 }
 
 var fmoney = function (ATR) {
   let str = String(ATR)
-  let count = 0,
-    newStr = ''
-  if (str == '') {
+  let count = 0
+  let newStr = ''
+  if (str === '') {
     return ''
   }
-  if (str.indexOf('.') == -1) {
-    str = String(parseFloat(str.replace(/[^\d\.-]/g, '')))
-    for (var i = str.length - 1; i >= 0; i--) {
-      if (count % 3 == 0 && count != 0) {
+  if (str.indexOf('.') === -1) {
+    str = String(parseFloat(str.replace(/[^d.-]/g, '')))
+    for (let i = str.length - 1; i >= 0; i--) {
+      if (count % 3 === 0 && count !== 0) {
         newStr = str.charAt(i) + ',' + newStr
       } else {
         newStr = str.charAt(i) + newStr
@@ -83,12 +83,12 @@ var fmoney = function (ATR) {
     }
     str = newStr
   } else {
-    str = String(str.replace(/[^\d\.-]/g, ''))
+    str = String(str.replace(/[^d.-]/g, ''))
     if (str.indexOf('.') - 1 < 0) {
       newStr = ATR
     } else {
-      for (var i = str.indexOf('.') - 1; i >= 0; i--) {
-        if (count % 3 == 0 && count != 0) {
+      for (let i = str.indexOf('.') - 1; i >= 0; i--) {
+        if (count % 3 === 0 && count !== 0) {
           newStr = str.charAt(i) + ',' + newStr
         } else {
           newStr = str.charAt(i) + newStr // 逐个字符相接起来
@@ -97,7 +97,7 @@ var fmoney = function (ATR) {
       }
     }
     let sint = (str + '00').substr((str + '00').indexOf('.'), 3)
-    if (sint == '0') {
+    if (sint === '0') {
       str = newStr
     } else {
       let strl = str.substr(str.indexOf('.'), 3)
