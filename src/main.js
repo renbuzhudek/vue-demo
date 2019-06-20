@@ -3,17 +3,17 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import store from './store';
-import VueRx from 'vue-rx';
-import Rx from 'rxjs/Rx';
-import './util/rem';
+import store from './store'
+import VueRx from 'vue-rx'
+import Rx from 'rxjs/Rx'
+import './util/rem'
 // import Mint from 'mint-ui';
 // import 'mint-ui/lib/style.css';
 // Vue.use(Mint);
-import ElementUI from 'element-ui';
+import ElementUI from 'element-ui'
 
-import 'element-ui/lib/theme-chalk/index.css';
-Vue.config.productionTip = false;
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueRx, Rx)
 /* eslint-disable no-new */

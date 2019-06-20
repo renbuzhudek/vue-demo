@@ -19,7 +19,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{jsx,txs,ts,js,json,css,md}": ["eslint --fix"]
+    "src/**/*.{jsx,txs,ts,js,vue,json,css,md}": ["eslint --fix"]
   },
   "dependencies": {
     "axios": "^0.18.0",
