@@ -44,7 +44,7 @@ export default {
   },
   mounted () {
     this.$on('hello', (e) => {
-      console.log(e);
+      console.log(e)
     })
   },
   watch: {
