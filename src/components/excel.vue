@@ -44,20 +44,13 @@ export default {
     },
     // json数据转excel
     changeToExcel (json, excelName) {
-      const _this = this
       json = XLSX.utils.json_to_sheet(json)
-      const wopts = { bookType: 'xlsx', bookSST: true, type: 'binary' }
       var wb = { SheetNames: ['Sheet1'], Sheets: {}, Props: {} }
       wb.Sheets['Sheet1'] = json
-      let tmpDown = new Blob([_this.s2ab(XLSX.write(wb, wopts))], { type: '' })
-
-      const aDom = document.createElement('a')
-      aDom.download = `${excelName || '数据文件'}.xlsx`
-      aDom.href = window.URL.createObjectURL(tmpDown)
-      aDom.click()
-      setTimeout(function () {
-        URL.revokeObjectURL(tmpDown) // 用URL.revokeObjectURL()来释放这个object URL
-      }, 100)
+      // 创建一个工作薄对象，打印出来可以看到有数组SheetNames 存放表格里面多张表的名字， Sheets对象存放对应表名的
+      // let wb = XLSX.utils.book_new()
+      // console.log(wb)
+      XLSX.writeFile(wb, 'out.xlsx')
     },
 
     // 字符串转二进制字符流
