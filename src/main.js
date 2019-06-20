@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-import VueRx from 'vue-rx'
+import VueRx from 'vue-rx';
 import Rx from 'rxjs/Rx';
 import './util/rem';
 // import Mint from 'mint-ui';

@@ -19,7 +19,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{jsx,txs,ts,js,vue}": "eslint"
+    "**/*.js": "eslint"
   },
 
   "dependencies": {
