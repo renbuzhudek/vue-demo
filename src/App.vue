@@ -25,6 +25,7 @@ export default {
           remark: '打车钱',
           inputterName: '凌波天堂制冷设备有限公司7560',
           typechange: true,
+          
           inputerror: false,
           moneyerror: false,
           fbillMoney: '200'
