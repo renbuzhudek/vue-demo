@@ -1,3 +1,10 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable new-cap */
+/* eslint-disable one-var */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-eval */
+/* eslint-disable no-new-object */
+/* eslint-disable no-unused-vars */
 import axios from 'axios'
 import { billSign } from '../lib/tenderjs3/browersign.js'
 import { getStorage, clearStorage, setStorage } from './storage.js'
@@ -118,7 +125,7 @@ const xhrRequest = (type, _this, url, params, ...needles) => {
       callback = needle
     }
   }
-  new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     let options = {
       method: type,
       url: url,
@@ -247,7 +254,7 @@ var fmoney = function (ATR) {
     return ''
   }
   if (str.indexOf('.') == -1) {
-    str = String(parseFloat(str.replace(/[^\d\.-]/g, '')))
+    str = String(parseFloat(str.replace(/[^d\.-]/g, '')))
     for (var i = str.length - 1; i >= 0; i--) {
       if (count % 3 == 0 && count != 0) {
         newStr = str.charAt(i) + ',' + newStr
@@ -258,11 +265,11 @@ var fmoney = function (ATR) {
     }
     str = newStr
   } else {
-    str = String(str.replace(/[^\d\.-]/g, ''))
+    str = String(str.replace(/[^d.-]/g, ''))
     if (str.indexOf('.') - 1 < 0) {
       newStr = ATR
     } else {
-      for (var i = str.indexOf('.') - 1; i >= 0; i--) {
+      for (let i = str.indexOf('.') - 1; i >= 0; i--) {
         if (count % 3 == 0 && count != 0) {
           newStr = str.charAt(i) + ',' + newStr
         } else {

@@ -10,16 +10,18 @@
     "start": "npm run dev",
     "build": "cross-env NODE_ENV=production node build/build.js",
     "buildtest": "cross-env NODE_ENV=testing node build/build.js testing",
-    "precommit": "lint-staged"
+    "lint-staged":"eslint --ext .js --ext .jsx --ext .vue src/"
   },
-  "lint-staged": {
-    "linters": {
-      "static/js/**/*.js": [
-        "./node_modules/.bin/eslint --fix",
-        "git add"
-      ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
     }
   },
+  "lint-staged": {
+    "**/*.js": "eslint --ext .js",
+    "**/*.vue": "eslint --ext .vue"
+  },
+
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.3.9",

@@ -1,4 +1,4 @@
-import {timeStamp2DateStr, fmoney, getbilltype} from './common.js'
+import {timeStamp2DateStr, fmoney} from './common.js'
 import {getStorage} from './storage.js'
 
 // 格式化日期
@@ -14,7 +14,7 @@ var format = (val) => {
   return (val - 0).toFixed(2) + '元'
 }
 var formatmore = (val) => {
-  if (/[^0-9\.]/.test(val)) return 'invalid value'
+  if (/[^0-9.]/.test(val)) return 'invalid value'
   val = val.replace(/^(\d*)$/, '$1.')
   val = (val + '00').replace(/(\d*\.\d\d)\d*/, '$1')
   val = val.replace('.', ',')

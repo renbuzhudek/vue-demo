@@ -1,7 +1,7 @@
 <template>
   <div id="app">
   <button @click="$router.push({path:'/'})">第一页</button>
-  <button  @click="$router.push({name:'ttttt',params: { userId: '123' }})">第二页</button>
+  <button  @click="$router.push({name:'ttttt',params: { userId: '123' }})">第二1页</button>
    <button  @click="$router.push({path:'/select/111'})">第三页</button>
       <button  @click="$router.push({path:'/selects'})">第4页</button>
  <button @click="$router.push({path:'/demoRx'})">RX测试</button>
@@ -25,7 +25,7 @@ export default {
           remark: '打车钱',
           inputterName: '凌波天堂制冷设备有限公司7560',
           typechange: true,
-          
+
           inputerror: false,
           moneyerror: false,
           fbillMoney: '200'
