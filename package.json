@@ -10,6 +10,7 @@
     "start": "npm run dev",
     "build": "cross-env NODE_ENV=production node build/build.js",
     "buildtest": "cross-env NODE_ENV=testing node build/build.js testing",
+     "fix":"eslint --fix --ext .js --ext .jsx --ext .vue src/",
     "lint":"eslint --ext .js --ext .jsx --ext .vue src/"
   },
   "husky": {
