@@ -25,7 +25,10 @@ export default {
     }
   },
   mounted () {
-    console.log('slot', this.$slots)
+    console.log('slot', this.$slots, this)
+  },
+  updated () {
+    console.log('updated::::', this.$props)
   },
   methods: {
     buttonClick () {
