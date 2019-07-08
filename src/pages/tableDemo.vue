@@ -1,5 +1,11 @@
 <template>
  <div>
+   <i class="fa fa-address-book" aria-hidden="true"></i>
+   <div style="height:10px;width:200px;">
+      8 <i class="fa fa-car"></i>
+ 9 <i class="fa fa-car" ></i>
+10 <i class="fa fa-car" ></i>
+   </div>
    <div>sdds</div>
     <el-table
 
