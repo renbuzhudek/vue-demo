@@ -1,6 +1,6 @@
 <template>
   <div>
-    <custom-input v-model="msg" :name="{name:'武汉'}">小明去上学吧</custom-input>
+    <custom-input v-model="msg" :name="{name:'武汉'}" ><h2>明天小明不上学！</h2></custom-input>
       <vm-input :num.sync="number" :width="30"></vm-input>
    <button @click="btnClick">懒加载</button>
    <v-excel/>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import tips from './tips/tips'
 import { mapState } from 'vuex'
 import vmInput from './input'
 // import customInput from './customInput'
@@ -53,8 +54,19 @@ export default {
       console.log(e)
     },
     btnClick (e) {
+      const h = this.$createElement
+      let vnode = h('div', {}, [
+        h('h2', {}, '你的微笑，'),
+        h('p', {}, '我明白就很好！')
+      ])
+      // console.log(this)
+      tips({
+        type: 'success',
+        name: '郑治益',
+        message: vnode
+      })
       return import(/* webpackChunkName: "print" */ './print').then(module => {
-        module.a()
+        // module.a()
       })
     }
   },
