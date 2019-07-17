@@ -1,0 +1,125 @@
+[
+    {
+        "skuId": "00001",
+        "skuName": "nameSku0001",
+        "warehouseItem": [
+            {
+                "warehouseId": "w00001",
+                "warehouseName": "仓库1",
+                "quantity": 50,
+                "lockQuantity": 5,
+                "availableQuantity": 45
+            },
+            {
+                "warehouseId": "w00002",
+                "warehouseName": "仓库2",
+                "quantity": 200,
+                "lockQuantity": 5,
+                "availableQuantity": 195
+            },
+            {
+                "warehouseId": "w00003",
+                "warehouseName": "仓库3",
+                "quantity": 40,
+                "lockQuantity": 1,
+                "availableQuantity": 39
+            }
+        ]
+    },
+    {
+        "skuId": "00002",
+        "skuName": "nameSku0002",
+        "warehouseItem": [
+            {
+                "warehouseId": "w00001",
+                "warehouseName": "仓库1",
+                "quantity": 100,
+                "lockQuantity": 5,
+                "availableQuantity": 95
+            },
+            {
+                "warehouseId": "w00002",
+                "warehouseName": "仓库2",
+                "quantity": 200,
+                "lockQuantity": 5,
+                "availableQuantity": 195
+            },
+            {
+                "warehouseId": "w00003",
+                "warehouseName": "仓库3",
+                "quantity": 5,
+                "lockQuantity": 5,
+                "availableQuantity": 0
+            }
+        ],
+        "w00001": {
+            "warehouseId": "w00001",
+            "warehouseName": "仓库1",
+            "quantity": 100,
+            "lockQuantity": 5,
+            "availableQuantity": 95
+        },
+        "w00002": {
+            "warehouseId": "w00002",
+            "warehouseName": "仓库2",
+            "quantity": 200,
+            "lockQuantity": 5,
+            "availableQuantity": 195
+        },
+        "w00003": {
+            "warehouseId": "w00003",
+            "warehouseName": "仓库3",
+            "quantity": 5,
+            "lockQuantity": 5,
+            "availableQuantity": 0
+        }
+    },
+    {
+        "skuId": "00003",
+        "skuName": "nameSku0003",
+        "warehouseItem": [
+            {
+                "warehouseId": "w00001",
+                "warehouseName": "仓库2",
+                "quantity": 100,
+                "lockQuantity": 5,
+                "availableQuantity": 95
+            },
+            {
+                "warehouseId": "w00002",
+                "warehouseName": "仓库2",
+                "quantity": 200,
+                "lockQuantity": 5,
+                "availableQuantity": 195
+            },
+            {
+                "warehouseId": "w00003",
+                "warehouseName": "仓库3",
+                "quantity": 50,
+                "lockQuantity": 5,
+                "availableQuantity": 45
+            }
+        ],
+        "w00001": {
+            "warehouseId": "w00001",
+            "warehouseName": "仓库2",
+            "quantity": 100,
+            "lockQuantity": 5,
+            "availableQuantity": 95
+        },
+        "w00002": {
+            "warehouseId": "w00002",
+            "warehouseName": "仓库2",
+            "quantity": 200,
+            "lockQuantity": 5,
+            "availableQuantity": 195
+        },
+        "w00003": {
+            "warehouseId": "w00003",
+            "warehouseName": "仓库3",
+            "quantity": 50,
+            "lockQuantity": 5,
+            "availableQuantity": 45
+        }
+    }
+]

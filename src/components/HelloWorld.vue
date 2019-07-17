@@ -11,7 +11,7 @@
 <script>
 import { mapState } from 'vuex'
 import vmInput from './input'
-import customInput from './customInput'
+// import customInput from './customInput'
 import vExcel from './excel'
 export default {
   name: 'HelloWorld',
@@ -60,7 +60,14 @@ export default {
   },
   components: {
     vmInput,
-    customInput,
+    'custom-input': () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          let com = import('./customInput')
+          resolve(com)
+        }, 0)
+      })
+    },
     vExcel
   }
 }

@@ -1,0 +1,175 @@
+[
+    {
+        "materielCode": "30101020001",
+        "materielLabel": "(30101020001 8.3)P51-2714895",
+        "bomId": "MASTER00217907",
+        "children": [
+            {
+                "materielCode": "20101050001",
+                "materielLabel": "(20101050001 8)P51-2714895-卷绕后卷芯-0001",
+                "bomId": "MASTER00216701",
+                "children": []
+            },
+            {
+                "materielCode": "10306020009",
+                "materielLabel": "(10306020009)铜保护片_16*16*0.4_D",
+                "children": []
+            },
+            {
+                "materielCode": "10306010010",
+                "materielLabel": "(10306010010)铝保护片_16*16*0.4_D",
+                "children": []
+            },
+            {
+                "materielCode": "10305010007",
+                "materielLabel": "(10305010007)铝连接片_17.6*38.9*0.6-12",
+                "children": []
+            },
+            {
+                "materielCode": "10305020007",
+                "materielLabel": "(10305020007)铜连接片_17.6*38.9*0.6-12",
+                "children": []
+            },
+            {
+                "materielCode": "10104010001",
+                "materielLabel": "(10104010001)电解液_1",
+                "children": []
+            },
+            {
+                "materielCode": "10302010001",
+                "materielLabel": "(10302010001)铝壳_26.5*148*95",
+                "children": []
+            },
+            {
+                "materielCode": "10207010007",
+                "materielLabel": "(10207010007)PET胶带_0.11*183",
+                "children": []
+            },
+            {
+                "materielCode": "10207010002",
+                "materielLabel": "(10207010002)PET胶带_0.05*48",
+                "children": []
+            },
+            {
+                "materielCode": "10303010001",
+                "materielLabel": "(10303010001)顶盖组件_25.3*146.7*2",
+                "children": []
+            },
+            {
+                "materielCode": "10207020001",
+                "materielLabel": "(10207020001)PI胶带_0.055*19",
+                "children": []
+            },
+            {
+                "materielCode": "10207010003",
+                "materielLabel": "(10207010003)PET胶带_0.022*20",
+                "children": []
+            },
+            {
+                "materielCode": "10207010004",
+                "materielLabel": "(10207010004)PET胶带_0.022*10",
+                "children": []
+            },
+            {
+                "materielCode": "10307020001",
+                "materielLabel": "(10307020001)PP底托片_141.5*23*0.8",
+                "children": []
+            },
+            {
+                "materielCode": "10207010005",
+                "materielLabel": "(10207010005)PET胶带_0.022*30",
+                "children": []
+            },
+            {
+                "materielCode": "10304010001",
+                "materielLabel": "(10304010001)化成钉_φ3.1*18",
+                "children": []
+            },
+            {
+                "materielCode": "10304020001",
+                "materielLabel": "(10304020001)密封胶塞_Ø3.1*4.7",
+                "children": []
+            },
+            {
+                "materielCode": "10304030001",
+                "materielLabel": "(10304030001)密封铝片_Ø7.72*0.9",
+                "children": []
+            },
+            {
+                "materielCode": "10307030001",
+                "materielLabel": "(10307030001)PC顶盖贴片_148.8*27*0.325",
+                "children": []
+            },
+            {
+                "materielCode": "10307010005",
+                "materielLabel": "(10307010005)PP包膜_203*182*0.1",
+                "children": []
+            }
+        ]
+    },
+    {
+        "materielCode": "10310010005",
+        "materielLabel": "(10310010005)端部绝缘片_51Ah_4p3s_JD",
+        "children": []
+    },
+    {
+        "materielCode": "10310010002",
+        "materielLabel": "(10310010002)端部绝缘片_51Ah_1P12S",
+        "children": []
+    },
+    {
+        "materielCode": "10308010010",
+        "materielLabel": "(10308010010)负极端板_51Ah_2P6S-QR1",
+        "children": []
+    },
+    {
+        "materielCode": "10310050002",
+        "materielLabel": "(10310050002)负极保护盖_51Ah_1P12S",
+        "children": []
+    },
+    {
+        "materielCode": "10309010013",
+        "materielLabel": "(10309010013)复合汇流排（非标）_51Ah_2P5S _QR",
+        "children": []
+    },
+    {
+        "materielCode": "10310040002",
+        "materielLabel": "(10310040002)正极保护盖_51Ah_1P12S",
+        "children": []
+    },
+    {
+        "materielCode": "10310010015",
+        "materielLabel": "(10310010015)底部绝缘膜_51Ah_2P5S",
+        "children": []
+    },
+    {
+        "materielCode": "10311020001",
+        "materielLabel": "(10311020001)结构胶  ",
+        "children": []
+    },
+    {
+        "materielCode": "10310030009",
+        "materielLabel": "(10310030009)上盖_51Ah_2P5S-QR",
+        "children": []
+    },
+    {
+        "materielCode": "10310020006",
+        "materielLabel": "(10310020006)电芯缓冲垫（带撕口）_51Ah_1P12S",
+        "children": []
+    },
+    {
+        "materielCode": "10308020006",
+        "materielLabel": "(10308020006)侧板_51Ah_2P5S",
+        "children": []
+    },
+    {
+        "materielCode": "10310010007",
+        "materielLabel": "(10310010007)正极绝缘座_51Ah_1P12S",
+        "children": []
+    },
+    {
+        "materielCode": "10310010008",
+        "materielLabel": "(10310010008)负极绝缘座_51Ah_1P12S",
+        "children": []
+    }
+]

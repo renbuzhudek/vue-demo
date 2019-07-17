@@ -4,6 +4,7 @@
   <button  @click="$router.push({name:'ttttt',params: { userId: '123' }})">第二1页</button>
    <button  @click="$router.push({path:'/select/111'})">第三页</button>
       <button  @click="$router.push({path:'/selects'})">第4页</button>
+            <button  @click="$router.push({path:'/uploadDemo'})">upload</button>
  <button @click="$router.push({path:'/demoRx'})">RX测试</button>
 
 <button @click="changes">点击</button>

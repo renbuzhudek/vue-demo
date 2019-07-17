@@ -53,6 +53,11 @@ let routes = {
       path: '/selects',
       name: 'selects',
       component: () => import(/* webpackChunkName: "selects" */'../pages/selects.vue')
+    },
+    {
+      path: '/uploadDemo',
+      name: 'uploadDemo',
+      component: () => import(/* webpackChunkName: "uploadDemo" */'../components/uploadDemo.vue')
     }
   ]
 }
