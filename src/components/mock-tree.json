@@ -8,12 +8,61 @@
                 "materielCode": "20101050001",
                 "materielLabel": "(20101050001 8)P51-2714895-卷绕后卷芯-0001",
                 "bomId": "MASTER00216701",
-                "children": []
+                "children": [
+                    {
+                        "materielCode": "20101050001",
+                        "materielLabel": "(20101050001 8)P51-2714895-卷绕后卷芯-0001",
+                        "bomId": "MASTER00216701",
+                        "children": []
+                    },
+                    {
+                        "materielCode": "10306020009",
+                        "materielLabel": "(10306020009)铜保护片_16*16*0.4_D",
+                        "children": []
+                    },
+                    {
+                        "materielCode": "10306010010",
+                        "materielLabel": "(10306010010)铝保护片_16*16*0.4_D",
+                        "children": []
+                    },
+                    {
+                        "materielCode": "10305010007",
+                        "materielLabel": "(10305010007)铝连接片_17.6*38.9*0.6-12",
+                        "children": []
+                    }
+                ]
             },
             {
                 "materielCode": "10306020009",
                 "materielLabel": "(10306020009)铜保护片_16*16*0.4_D",
-                "children": []
+                "children": [
+                    {
+                        "materielCode": "20101050001",
+                        "materielLabel": "(20101050001 8)P51-2714895-卷绕后卷芯-0001",
+                        "bomId": "MASTER00216701",
+                        "children": []
+                    },
+                    {
+                        "materielCode": "20101050001",
+                        "materielLabel": "(20101050001 8)P51-2714895-卷绕后卷芯-0001",
+                        "bomId": "MASTER00216701",
+                        "children": [
+                            {
+                                "materielCode": "20101050001",
+                                "materielLabel": "(20101050001 8)P51-2714895-卷绕后卷芯-0001",
+                                "bomId": "MASTER00216701",
+                                "children": []
+                            },
+                            {
+                                "materielCode": "20101050001",
+                                "materielLabel": "(20101050001 8)P51-2714895-卷绕后卷芯-0001",
+                                "bomId": "MASTER00216701",
+                                "children": []
+                            }
+                        ]
+                    }
+
+                ]
             },
             {
                 "materielCode": "10306010010",
