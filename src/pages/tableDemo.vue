@@ -30,15 +30,33 @@ v-for="(item,index) in tableHead"
 
  >
  </el-table-column>
-
+ <el-table-column label="姓名">
+<template slot-scope="{row,$index}">
+<el-input v-if="row.editing" v-validate="{rule:ruleName,prop:`${$index}.name`}"   v-model="row.name"></el-input>
+<span v-else>{{row.name}}</span>
+</template>
+</el-table-column>
+<el-table-column label="地址">
+<template slot-scope="{row,$index}">
+<el-input v-if="row.editing" v-validate="{rule,prop:`${$index}.address`}"   v-model="row.address"></el-input>
+<span v-else>{{row.address}}</span>
+</template>
+</el-table-column>
     <el-table-column
      align="left"
       label="操作"
       show-overflow-tooltip>
-<template slot-scope="scope">
+<template slot-scope="{row,$index}">
+  <el-button size="mini" v-if="row.editing" @click="save(row,$index)">保存</el-button>
+  <el-button size="mini" v-if="row.editing"  @click="row.editing=false">取消</el-button>
   <el-button
+   v-if="!row.editing"
           size="mini"
-          @click="operation(scope.row)">{{action}}</el-button>
+          @click="operation(row)">{{action}}</el-button>
+            <el-button
+            v-if="!row.editing"
+          size="mini"
+          @click="edit(row)">编辑</el-button>
   </template>
     </el-table-column>
   </el-table>
@@ -60,40 +78,78 @@ v-for="(item,index) in tableHead"
 
 <script>
 import tableTip from '../components/tableTip.vue'
+import tableValidate from '@/mixins/tableValidate'
+
 export default {
   components: {
     'v-table-tip': tableTip
   },
+  mixins: [tableValidate],
   data () {
+    const checkChart = (value, callback) => {
+      if (value.length < 5) return callback()
+      // eslint-disable-next-line standard/no-callback-literal
+      callback(true)
+    }
     return {
       action: '转让',
       currentPage: 1, // 默认当前页
-      tableHead: [{data: 'date', label: '日期'}, {data: 'name', label: '姓名'}, {data: 'address', label: '地址'}], // 设置表头
+      tableHead: [{data: 'date', label: '日期'}],
       tableData3: [ // 数据源
         {
           date: '2016-05-19',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          address: '上海市普陀区金沙江路 1518 弄',
+          editing: false
         },
         {
           date: '2016-05-03',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          address: '上海市普陀区金沙江路 1518 弄',
+          editing: false
         },
         {
           date: '2016-05-10',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          address: '上海市普陀区金沙江路 1518 弄',
+          editing: false
         }
       ],
       multipleSelection: [], // 被选中行的数据
-      allSelect: false
+      allSelect: false,
+      rule: [{
+        required: true,
+        message: '地址不能为空'
+      },
+      {
+        message: '地址长度必须大于5个字符',
+        validator: checkChart
+      }],
+      ruleName: [{
+        required: true,
+        message: '姓名不能为空'
+      },
+      {
+        message: '姓名长度必须大于5个字符',
+        validator: checkChart
+      }]
     }
   },
   mounted () {
     console.log($(document))
   },
   methods: {
+    save (row, index) {
+      this.validate(row, index).then(
+        res => {
+          if (!res) return false
+          row.editing = false
+        }
+      )
+    },
+    edit (row) {
+      row.editing = true
+    },
     post (url) {
       console.log(url)
     },
@@ -131,5 +187,7 @@ export default {
 </script>
 
 <style>
-
+.is-danger{
+  border:1px solid red !important;
+}
 </style>
