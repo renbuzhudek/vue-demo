@@ -3,7 +3,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
-
+console.log('NODE_ENV----', process.env.NODE_ENV)
 module.exports = {
   dev: {
 
@@ -56,7 +56,7 @@ module.exports = {
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: process.env.NODE_ENV !== 'production',
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 
@@ -64,7 +64,7 @@ module.exports = {
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
     // npm install --save-dev compression-webpack-plugin
-    productionGzip: false,
+    productionGzip: process.env.NODE_ENV === 'production',
     productionGzipExtensions: ['js', 'css'],
 
     // Run the build command with an extra argument to
